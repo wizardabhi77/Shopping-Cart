@@ -9,4 +9,23 @@ describe("App component", () => {
         render(<App />);
         expect(screen.getByRole("heading").textContent).toMatch("SHOPKILLA");
     })
+    
 })
+
+/*
+describe("Navigation Bar", () => {
+
+    
+    it("Home button lead to Home page", async () => {
+        render(<App />);
+
+        const user = userEvent.setup();
+
+        await user.click(screen.getByRole("button", { name: "HOME" }));
+
+        expect(screen.getByTestId('home').textContent).toMatch(/HOME/i);
+
+    })
+})
+
+*/

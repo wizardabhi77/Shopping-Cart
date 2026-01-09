@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 
-function Header() {
+function Header({cart}) {
 
     return (
         <div className="header">
@@ -13,6 +13,7 @@ function Header() {
                 </ul>
             </nav>
             
+            <p>CART ICON, number of items in cart: {cart.length}</p>
         </div>
     )
 }
