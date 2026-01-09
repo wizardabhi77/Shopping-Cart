@@ -9,16 +9,18 @@ function Cart () {
     return (
         <>
         <h2>CART</h2>
-        <ul>
+        <ul className="cart">
             {cartList.map((item)=>{
                 return (
-                    <div key={item.id}>
+                    <div key={item.id} className="item">
                         <h3>{item.title}</h3>
                         <img src={item.image} />
                         <br />
-                        <button onClick={() => increaseQty(item.id)}>+</button>
-                        <p>Quantity:{item.quantity}</p>
+                        <p>Quantity:</p>
                         <button onClick={() => decreaseQty(item.id)}>-</button>
+                        <p>{item.quantity}</p>
+                        <button onClick={() => increaseQty(item.id)}>+</button>
+                        
                     </div>
                 )
             })}

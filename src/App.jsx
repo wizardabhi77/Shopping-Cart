@@ -28,7 +28,9 @@ function App() {
 
   function addToCart(product,quantity) {
 
-    product = {...product, "quantity" : quantity};
+    
+
+    product = {...product, "quantity" : (!quantity || quantity == 0 ? 1 : quantity)};
 
     setCartList([...cartList,product]);
   }

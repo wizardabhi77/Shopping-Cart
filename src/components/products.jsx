@@ -35,21 +35,22 @@ function Product () {
 
     return (
 
-        <div>
+        <div className="shop">
             {productList.map((product)=> {
                return(
-                <div key={product.id}>
+                <div key={product.id} className="card">
                     <h3>{product.title}</h3>
                     <img src={product.image}  />
                     <p>Price:{product.price}</p>
                     <p>{product.description}</p>
-                    <label htmlFor="quantity"></label>
+                    <label htmlFor="quantity">NUMBER OF ITEMS:</label>
                     <input 
                     type="number" 
                     id="quantity" 
                     name="quantity" 
                     onChange = {(e) => handleChange(product.id, e.target.value)}
                     />
+                    <br />
                     <br />
                     <button onClick={()=> addToCart(product,quantity[product.id])}>Add to CART</button>
                 </div>

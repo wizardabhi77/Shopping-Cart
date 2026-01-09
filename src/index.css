@@ -11,6 +11,10 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  display: flex;
+  justify-content: center;
+  
 }
 
 a {
@@ -33,6 +37,17 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+h2 {
+  font-weight: bolder;
+  
+  color: aquamarine;
+}
+
+img {
+  max-width: 100px;
+  height: auto;
 }
 
 button {
